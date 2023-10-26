@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: akpriv1
+spec:
+  imagePullSecrets:
+  - name: mycred1
+  containers:
+  - image: kitty6xt5/apache2
+    name: akpriv1
+    ports:
+    - containerPort: 80

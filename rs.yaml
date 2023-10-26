@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      color: red
+  template:
+    metadata:
+      labels:
+        color: red  # Move 'color: red' under 'labels'
+    spec:
+      containers:
+        - name: myapp
+          image: httpd
+          ports:
+            - containerPort: 80

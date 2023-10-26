@@ -1,0 +1,10 @@
+apiVersion: v1 #api version get using kubectl api-resources
+kind: Pod     #kind name or typeor services
+metadata:    #detail of kind 
+  name: ak
+spec: #details of container
+  containers:
+  - image: httpd
+    name: ak
+    ports:
+    - containerPort: 80
