@@ -3,22 +3,21 @@ kind: Deployment
 metadata:
   name: mydeploy
 spec:
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 2
-      maxSurge: 5
-  replicas: 20
+  replicas: 1
   selector:
     matchLabels:
-      app: mydeploy
+      app: red
   template:
     metadata:
       labels:
-        app: mydeploy
+        app: red
     spec:
       containers:
       - name: mydeploy
         image: nginx
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "400m"   # 10% of 4 core CPU core
+            memory: "400Mi"  # % of 16 GiB
