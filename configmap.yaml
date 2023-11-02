@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mycmap
+data:
+  hello: world
+  cool: xyz
