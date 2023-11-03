@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: myapp
-    image: aakashgaur57/courses
+    image: aakashgaur57/
     ports:
       - containerPort: 80
