@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: mysapod1
+ namespace: default
+spec:
+  serviceAccountName: newsa
+  containers:
+    - name: mypodnginx1
+      image: httpd

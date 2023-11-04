@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: myfirstrb
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: newsa
+roleRef:
+  kind: Role
+  name: firstrole
+  apiGroup: rbac.authorization.k8s.io
