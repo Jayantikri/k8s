@@ -61,6 +61,7 @@ chown $(id -u):$(id -g) $HOME/.kube/config
 ##  Now apply calico project 
 ```
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
+```
  ## if you get error " kubeadm reset" , "iptables --flush"
 ```
 
