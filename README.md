@@ -21,7 +21,7 @@ EOF
 ```
 ## now run 
 ```
-yum update ; yum install kubeadm -y
+yum update ; yum install dokcer kubeadm -y
 ```
 
 ## Start service of docker & kubelet in all the nodes 
