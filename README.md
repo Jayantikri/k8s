@@ -21,7 +21,7 @@ EOF
 ```
 ## now run 
 ```
-yum update ; yum install dokcer kubeadm -y
+yum update ; yum install docker kubeadm -y
 ```
 
 ## Start service of docker & kubelet in all the nodes 
@@ -61,6 +61,7 @@ chown $(id -u):$(id -g) $HOME/.kube/config
 ##  Now apply calico project 
 ```
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
+ ## if you get error " kubeadm reset" , "iptables --flush"
 ```
 
 # Installing calico in minikube cluster..
