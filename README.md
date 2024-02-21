@@ -64,6 +64,9 @@ kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/
 ```
  ## if you get error " kubeadm reset" , "iptables --flush"
 ```
+## after this copy cluster config file in from .kube file into your machine and export it to use it in your vm
+ ```
+export kubeconfig=filepath
 
 # Installing calico in minikube cluster..
 
