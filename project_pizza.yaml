@@ -18,10 +18,23 @@ spec:
         image: aakashgaur57/pizza-service:1.12.0
         command: [ "nginx" ]  
         args: [ "-g", "daemon off;" ]
-        
         ports:
-        - containerPort: 80
-
+        - containerPort: 80  
+        
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8081
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        
+          
 ---
 
 apiVersion: v1
